@@ -19,7 +19,7 @@ const UserSchema = new Schema({
   },
 
   phone: {
-      type: Number,
+      type: String,
       unique: true,
       trim: true,
       validate: [({length}) => length === 10, "Please enter a 10 digit phone number."]

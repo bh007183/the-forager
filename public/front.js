@@ -22,10 +22,23 @@ createAccountButton.addEventListener("click", function(event){
         console.log(accData)
         fetch('/api/addAccount', {
             method: "POST",
+            headers:{
+                'Content-Type': 'application/json'
+            },
             body:  JSON.stringify(accData)
         }).then(res => {
-            console.log(res.json())
-        }).catch(console.log("error"))
+            return res.json()
+        }).then(data=> {
+            if(data.message){
+                alert(data.message)
+            }
+            if(data.code === 11000){
+                alert("Username or Password taken")
+            }
+        
+        }).catch(err=>{{
+           console.log(err)
+        }})
 
     }
 

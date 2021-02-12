@@ -5,13 +5,14 @@ module.exports = function(app){
 
     app.post("/api/addAccount", (req, res) => {
       const hashedPass = bcrypt.hashSync(req.body.password, saltRounds)
+      
       db.Users.create(
           {
             userName: req.body.userName,
             password: hashedPass,
-            phone: phoneNumber
+            phone: req.body.phone
         })
-      .then(res.status(200))
-      .catch(res.status(400).send("Something is wrong on line 7 create user."))
+      .then(data=> {res.json(data).status(500)})
+      .catch(err => {res.status(400).json(err).send(err._message) })
     })
 }
