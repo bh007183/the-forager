@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const PlantSchema = new Schema({
+const FungieSchema = new Schema({
   image: {
       type: String,
       require: true
@@ -21,6 +21,6 @@ const PlantSchema = new Schema({
   }
 });
 
-const Plants = mongoose.model("Plants", PlantSchema);
+const Fungie = mongoose.model("Fungie", FungieSchema);
 
-module.exports = Plants;
+module.exports = Fungie;

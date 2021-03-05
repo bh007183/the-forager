@@ -24,7 +24,7 @@ app.use(express.json());
 //   );
 
 //routes 
-// app.use(require("./routes/back-api-routes.js"));
+app.use(require("./routes/back-api-routes.js"));
 require("./routes/back-user-routes")(app);
 
 app.use(express.static("public"));

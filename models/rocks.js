@@ -3,17 +3,13 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const PlantSchema = new Schema({
+const RockSchema = new Schema({
   image: {
       type: String,
       require: true
 
     },
  
-  name: {
-    type: String,
-    unique: true,
-  },
 
   notes: {
     type: String,
@@ -21,6 +17,6 @@ const PlantSchema = new Schema({
   }
 });
 
-const Plants = mongoose.model("Plants", PlantSchema);
+const Rocks = mongoose.model("Rocks", RockSchema);
 
-module.exports = Plants;
+module.exports = Rocks;

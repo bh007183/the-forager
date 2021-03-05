@@ -1,5 +1,6 @@
 module.exports = {
     Plants: require("./plants"),
-    Users: require("./user")
-    
+    Animal: require("./animals"),
+    Rocks: require("./rocks"),
+    fungie: require("./fungie")  
 }
