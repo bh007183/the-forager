@@ -39,7 +39,7 @@ rockBtn.addEventListener("click", function(){
             let col = document.createElement("div")
             col.classList.add("col")
             col.classList.add("s12")
-            col.classList.add("m6")
+            col.classList.add("m6   ")
             let card = document.createElement("div")
             card.classList.add("card")
             let imgCont = document.createElement("div")
