@@ -18,35 +18,63 @@
         <li><a class="rocks" >Rocks</a></li>
         <li><a class="fungie">Fungie</a></li>
       </ul>
-      <a class='dropdown-trigger hide-on-med-and-up' href='#' data-target='dropdown1'>  <i class="material-icons">menu</i></a>
+      <a class='dropdown-trigger btn-small hide-on-med-and-up' href='#' data-target='dropdown1'>  <i class="material-icons center">menu</i></a>
 
       <!-- Dropdown Structure -->
       <ul id='dropdown1' class='dropdown-content'>
         <li><a class="plants">Plants</a></li>
         <li><a class="animals">Animals</a></li>
-        <li><a id="rocks">Rocks</a></li>
+        <li><a class="rocks">Rocks</a></li>
         <li><a class="fungie">Fungie</a></li>
       </ul>
+      <a class="btn-floating hide-on-med-and-up modal-trigger right btn-large waves-effect waves-light green" href="#modal1"><i class="material-icons center">add</i></a>
     </div>
   </nav>
   <main class="main">
-  <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="row">
+          <form class="col s12">
+            <div class="row" styel="display: flex; justify-content: center">
+              <div class="input-field col s12 m6">
+                <select class="icons category">
+                  <option value="" disabled selected>Classification</option>
+                  <option value="Plants" data-icon="images/sample-1.jpg" class="left">Plants</option>
+                  <option value="Animal" data-icon="images/office.jpg" class="left">Animals</option>
+                  <option value="Rocks" data-icon="images/yuna.jpg" class="left">Rocks</option>
+                  <option value="Fungie" data-icon="images/yuna.jpg" class="left">Fungie</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field  col s12">
+                <input id="input_text" class="name" type="text" data-length="10">
+                <label for="input_text">Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea2" class="materialize-textarea notes"></textarea>
+                <label for="textarea2">Notes</label>
+              </div>
+            </div>
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>Image</span>
+                <input type="file" multiple>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path image validate" type="text" placeholder="Image">
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+      <div class="modal-footer" style="display: flex; justify-content: center;">
+        <a href="#!" class="modal-close waves-effect center enter waves-green btn-flat">Enter</a>
+      </div>
     </div>
-  </div>
+  
 </main>
 </body>
 <script src="front-get.js"></script>

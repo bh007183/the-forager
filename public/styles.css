@@ -1,0 +1,9 @@
+.card {
+    height: 500px;
+  }
+  img {
+    /* ... */
+    object-fit: cover;
+    height: unset;
+    aspect-ratio: 8 / 6; /* Amounts close to a 184px height */
+  }

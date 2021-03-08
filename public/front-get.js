@@ -2,24 +2,29 @@
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.dropdown-trigger');
     M.Dropdown.init(elems);
+    var elems = document.querySelectorAll('.modal');
+    M.Modal.init(elems);
+    var elems = document.querySelectorAll('select');
+    M.FormSelect.init(elems);
   });
 
 
 
 
-let plantBtn = document.querySelector(".plants")
-plantBtn.addEventListener("click", function(){
+let plantBtn = document.querySelectorAll(".plants")
+plantBtn.forEach(function(btn){
+btn.addEventListener("click", function(){
     console.log("Click Plant")
 axios.get("/api/plants").then(res => {
 
     for(let i = res.data.length -1; i >= 0; i--){
-        // console.log(res.data[i].image)
+
         let row = document.createElement("div")
         row.classList.add("row")
         let col = document.createElement("div")
         col.classList.add("col")
         col.classList.add("s12")
-        col.classList.add("m6   ")
+        col.classList.add("m6")
         let card = document.createElement("div")
         card.classList.add("card")
         let imgCont = document.createElement("div")
@@ -48,13 +53,15 @@ axios.get("/api/plants").then(res => {
         a.append(atext)
 
 
-})
-    
-   
+}
 }) 
+})
+})
 
-let animalBtn = document.querySelector(".animals")
-animalBtn.addEventListener("click", function(){
+
+let animalBtn = document.querySelectorAll(".animals")
+animalBtn.forEach(function(btn){
+btn.addEventListener("click", function(){
     console.log("Click Animal")
     axios.get("/api/animal").then(res => {
 
@@ -65,7 +72,7 @@ animalBtn.addEventListener("click", function(){
             let col = document.createElement("div")
             col.classList.add("col")
             col.classList.add("s12")
-            col.classList.add("m6   ")
+            col.classList.add("m6")
             let card = document.createElement("div")
             card.classList.add("card")
             let imgCont = document.createElement("div")
@@ -93,25 +100,25 @@ animalBtn.addEventListener("click", function(){
             btnCont.append(a)
             a.append(atext)
 
-    
+        }
     })
    
 }) 
+})
 
-let rockBtn = document.querySelector(".rocks")
-rockBtn.addEventListener("click", function(){
+let rockBtn = document.querySelectorAll(".rocks")
+rockBtn.forEach(function(btn){
+btn.addEventListener("click", function(){
     console.log("Click Rock")
     axios.get("/api/rocks").then(res => {
         
-        
         for(let i = res.data.length -1; i >= 0; i--){
-            // console.log(res.data[i].image)
             let row = document.createElement("div")
             row.classList.add("row")
             let col = document.createElement("div")
             col.classList.add("col")
             col.classList.add("s12")
-            col.classList.add("m6   ")
+            col.classList.add("m6")
             let card = document.createElement("div")
             card.classList.add("card")
             let imgCont = document.createElement("div")
@@ -144,8 +151,11 @@ rockBtn.addEventListener("click", function(){
     })
    
 }) 
-let fungieBtn = document.querySelector(".fungie")
-fungieBtn.addEventListener("click", function(){
+
+})
+let fungieBtn = document.querySelectorAll(".fungie")
+fungieBtn.forEach(function(btn){
+    btn.addEventListener("click", function(){
     axios.get("/api/fungie").then(res => {
 
         for(let i = res.data.length -1; i >= 0; i--){
@@ -155,7 +165,7 @@ fungieBtn.addEventListener("click", function(){
             let col = document.createElement("div")
             col.classList.add("col")
             col.classList.add("s12")
-            col.classList.add("m6   ")
+            col.classList.add("m6")
             let card = document.createElement("div")
             card.classList.add("card")
             let imgCont = document.createElement("div")
@@ -183,8 +193,9 @@ fungieBtn.addEventListener("click", function(){
             btnCont.append(a)
             a.append(atext)
 
-    
+        }
     })
    
 }) 
+})
 
