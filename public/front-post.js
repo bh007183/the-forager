@@ -1,7 +1,16 @@
+let image = document.querySelector(".image").value
+ function  updateProfilePic(event){
+    console.log(event.target)
+    let reader = new FileReader();
+        reader.readAsDataURL(image.value);
+    
+}
+
+
+
 
 
 let addBtn = document.querySelector(".enter")
-
 addBtn.addEventListener("click", function(event){
     event.preventDefault()
     console.log("click")
@@ -10,6 +19,10 @@ addBtn.addEventListener("click", function(event){
     let name = document.querySelector(".name").value
     let notes = document.querySelector(".notes").value
     let image = document.querySelector(".image").value
+    
+
+    console.log(image)
+  
     
     let obj = {
         category: category,

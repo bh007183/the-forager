@@ -62,7 +62,6 @@ router.get("/api/fungie", async (req, res) => {
 });
 
 
-
 router.get("/api/plants", async (req, res) => {
   console.log(req.body);
   const data = await db.Plants.find()

@@ -63,7 +63,7 @@ let animalBtn = document.querySelectorAll(".animals")
 animalBtn.forEach(function(btn){
 btn.addEventListener("click", function(){
     console.log("Click Animal")
-    axios.get("/api/animal").then(res => {
+    axios.get("/api/animals").then(res => {
 
         for(let i = res.data.length -1; i >= 0; i--){
             // console.log(res.data[i].image)
@@ -179,8 +179,6 @@ fungieBtn.forEach(function(btn){
             btnCont.classList.add("card-action")
             let a = document.createElement("a")
             let atext = document.createTextNode(res.data[i].name)
-           
-            
             let main = document.querySelector(".main")
             main.append(row)
             row.append(col)

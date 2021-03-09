@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav>
+  <nav class="green">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a class="plants">Plants</a></li>
@@ -58,15 +58,14 @@
                 <label for="textarea2">Notes</label>
               </div>
             </div>
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>Image</span>
-                <input type="file" multiple>
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path image validate" type="text" placeholder="Image">
-              </div>
-            </div>
+           
+             
+              
+              <input type="file"
+              id="avatar" name="avatar"
+              onchange="updateProfilePic(this)">
+              
+           
           </form>
         </div>
       </div>
